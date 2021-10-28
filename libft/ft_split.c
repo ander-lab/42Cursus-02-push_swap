@@ -6,6 +6,7 @@
 /*   By: Alejandro <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 23:45:28 by Alejandro         #+#    #+#             */
+/*   Updated: 2021/10/08 20:17:45 by ajimenez         ###   ########.fr       */
 /*   Updated: 2021/10/03 18:48:15 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -73,3 +74,20 @@ char	**ft_split(char const *s, char c)
 	}
 	return (split);
 }
+/*
+int main(void)
+{
+	char **splited;
+	char *inicial;
+	size_t i;
+
+	i = 0;
+	inicial = "hola.me.llamo.alex";
+	splited = ft_split(inicial, '.');
+	while (i<=4)
+	{
+		printf("%s", splited[i]);
+		printf("\n");
+		++i;
+	}
+}*/

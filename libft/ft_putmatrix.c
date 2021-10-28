@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_putmatrix.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajimenez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 13:04:12 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/10/26 17:29:04 by ajimenez         ###   ########.fr       */
+/*   Created: 2021/10/08 18:46:56 by ajimenez          #+#    #+#             */
+/*   Updated: 2021/10/08 20:23:25 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_putmatrix(char **s, size_t lines)
 {
-	t_list	*lstnew;
+	size_t	aux;
 
-	lstnew = malloc(sizeof(t_list));
-	if (!lstnew)
-		return (0);
-	lstnew->content = content;
-	lstnew->next = NULL;
-	return (lstnew)
+	aux = 0;
+	while (aux < lines)
+	{
+		ft_putstr_fd(s[aux], 1);
+		aux++;
+		write (1, "\n", 1);
+	}
 }

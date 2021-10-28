@@ -1,25 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajimenez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 13:04:12 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/10/26 17:29:04 by ajimenez         ###   ########.fr       */
+/*   Created: 2021/10/25 12:49:44 by ajimenez          #+#    #+#             */
+/*   Updated: 2021/10/25 13:44:39 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*lstnew;
-
-	lstnew = malloc(sizeof(t_list));
-	if (!lstnew)
-		return (0);
-	lstnew->content = content;
-	lstnew->next = NULL;
-	return (lstnew)
-}
+#include "../includes/push_swap.h"
+/*	void ft_push(t_list *src, t_list *dst, char c)*/
