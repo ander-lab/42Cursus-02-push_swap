@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/10/28 13:56:58 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/01 17:48:27 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ typedef struct s_stack
 	int				content;
 	struct s_stack	*next;
 }				t_stack;
+
+typedef struct s_struct
+{
+	/*Revisar que datos necesito para el algoritmo*/
+	t_stack *stack_a;
+	t_stack *stack_b;
+}	t_struct;
 
 void ft_putmov(char a, char b, char c);
 
