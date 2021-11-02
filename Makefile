@@ -6,7 +6,7 @@
 #    By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 17:35:10 by ajimenez          #+#    #+#              #
-#    Updated: 2021/11/01 17:36:50 by ajimenez         ###   ########.fr        #
+#    Updated: 2021/11/02 14:00:09 by Alejandro        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBP	= push_swap.a
 
 NAME 	= push_swap 
 INCLUDE	= -I./includes/
-SRCS	= ./src/push_swap.c ./utils/ft_lst_int.c ./utils/ft_lst_int_2.c
+SRCS	= ./srcs/push_swap.c ./utils/ft_lst_int.c ./utils/ft_lst_int_2.c
 
 OBJS	= $(SRCS:.c=.o)
 COMP	= $(CC) $(LIBP) $(SRCS) -o $(NAME)
