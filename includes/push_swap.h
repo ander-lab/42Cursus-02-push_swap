@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/03 10:02:19 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:52:38 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,16 @@ typedef struct s_struct
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 }	t_struct;
+/*
+** TMP
+*/
+void	ft_print_stack(t_stack *stack_a, t_stack *stack_b);
 
+/*
+** MOVS UTILS
+*/
 void	ft_putmov(char a, char b, char c);
-void	ft_print_stack(t_struct *ps);
+void	ft_swap(t_stack **stack, char c);
 
 /*
 ** LST INT FUNCTIONS
