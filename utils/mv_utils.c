@@ -6,13 +6,13 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:57:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/10/25 13:29:47 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:05:44 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void ft_put_rr(char c)
+static void	ft_put_rr(char c)
 {
 	if (c == 'r')
 		write (1, "rrr\n", 4);
@@ -22,7 +22,7 @@ static void ft_put_rr(char c)
 		write (1, "rrb\n", 4);
 }
 
-void ft_putmov(char a, char b, char c)
+void	ft_putmov(char a, char b, char c)
 {
 	if (b == 'a' && c == 'x')
 	{

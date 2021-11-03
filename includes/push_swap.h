@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/01 17:48:27 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:02:19 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-#include <limits.h>
+# include <limits.h>
 
 typedef struct s_stack
 {
@@ -22,14 +22,15 @@ typedef struct s_stack
 	struct s_stack	*next;
 }				t_stack;
 
+/*Revisar que datos necesito para el algoritmo*/
 typedef struct s_struct
 {
-	/*Revisar que datos necesito para el algoritmo*/
-	t_stack *stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 }	t_struct;
 
-void ft_putmov(char a, char b, char c);
+void	ft_putmov(char a, char b, char c);
+void	ft_print_stack(t_struct *ps);
 
 /*
 ** LST INT FUNCTIONS
