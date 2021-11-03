@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/03 10:03:37 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:55:26 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,14 @@ int	main(int ac, char **av)
 {
 	t_struct	*ps;
 
-	ps = calloc(sizeof(t_struct), 1);
-	if (ac <= 1)
+	ps = ft_calloc(sizeof(t_struct), 1);
+	if (ac <= 2)
 		return (0);
 	ft_add_stack_a(ps, av);
 	ps->stack_b = ft_lstnew_int(0);
-	ft_print_stack(ps);
+	ft_print_stack(ps->stack_a, ps->stack_b);
+	ft_swap(&ps->stack_a, 'a');
+	ps->stack_b = ft_lstnew_int(0);
+	ft_print_stack(ps->stack_a, ps->stack_b);
 	return (0);
 }
