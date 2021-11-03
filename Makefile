@@ -6,7 +6,7 @@
 #    By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 17:35:10 by ajimenez          #+#    #+#              #
-#    Updated: 2021/11/03 10:10:47 by ajimenez         ###   ########.fr        #
+#    Updated: 2021/11/03 10:15:07 by ajimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ fclean: 	clean
 					@make fclean -C ./libft
 					$(RM) $(NAME)
 					$(RM) $(PROG)
+					$(RM) $(LIBP)
 					@echo "\n\033[31mEverything fcleaned! ░░░░░░ ٩(╬ʘ益ʘ╬)۶ ░░░░░\n\033[39m"
 
 re:			fclean all
