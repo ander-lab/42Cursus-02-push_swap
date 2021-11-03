@@ -6,9 +6,13 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:49:44 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/10/25 13:44:39 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/03 13:51:53 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-/*	void ft_push(t_list *src, t_list *dst, char c)*/
+
+void	ft_push(t_stack *src, t_stack **dst, char c)
+{
+
+}
