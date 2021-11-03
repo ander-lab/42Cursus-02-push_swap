@@ -6,12 +6,13 @@
 #    By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 17:35:10 by ajimenez          #+#    #+#              #
-#    Updated: 2021/11/03 10:15:07 by ajimenez         ###   ########.fr        #
+#    Updated: 2021/11/03 13:14:10 by ajimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		= gcc 
 CFLAGS	= -Wall -Wextra -Werror -g
+SAN		= -fsanitize=address
 LIB 	= ar -rcs
 RM		= /bin/rm -rf
 
@@ -21,19 +22,28 @@ LIBP	= push_swap.a
 NAME 	= push_swap 
 INCLUDE	= -I./includes/
 SRCS	= ./srcs/push_swap.c ./utils/ft_lst_int.c ./utils/ft_lst_int_2.c \
-		  ./tmp/ft_print_stacks.c
+		  ./utils/ft_swap.c ./tmp/ft_print_stacks.c ./utils/mv_utils.c
 
 OBJS	= $(SRCS:.c=.o)
 COMP	= $(CC) $(LIBP) $(SRCS) -o $(NAME)
+SANCOMP	= $(CC) $(SAN) $(LIBP) $(SRCS) -g3 -o $(NAME)
 
 all: 		$(NAME)
 
-$(NAME):	$(OBJS)
-					@echo "\033[33m----Compiling libft----"
-					@make -C ./libft
+$(NAME):			$(OBJS)
+					@echo "\n\033[33mMaking libft! ░░░░░░ /(._.)\ ░░░░░\033[39m\n"
+					@make -s -C ./libft
 					@cp libft/libft.a ./$(LIBP)
 					$(LIB) $(LIBP) $(OBJS)
-					$(COMP)
+					$(COMP) 
+					@echo "\n\033[1;32mEverything done! ░░░░░░ ＼(>o<)ノ ░░░░░\033[39m\n"
+
+fsanitize:			$(OBJS)
+					@echo "\n\033[33mMaking libft! ░░░░░░ /(ಠ_ಠ)\ ░░░░░\033[39m\n"
+					@make -s -C ./libft
+					@cp libft/libft.a ./$(LIBP)
+					$(LIB) $(LIBP) $(OBJS)
+					$(SANCOMP)
 					@echo "\n\033[1;32mEverything done! ░░░░░░ ＼(>o<)ノ ░░░░░\033[39m\n"
 
 clean:
