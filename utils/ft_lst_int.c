@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:41:18 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/10/28 13:36:07 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/05 17:51:10 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ t_stack	*ft_lstlast_int(t_stack *lst)
 
 void	ft_lstadd_front_int(t_stack **lst, t_stack *new)
 {
+
 	if (!new)
 		return ;
 	new->next = *lst;
