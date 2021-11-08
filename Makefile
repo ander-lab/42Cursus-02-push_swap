@@ -6,7 +6,7 @@
 #    By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 17:35:10 by ajimenez          #+#    #+#              #
-#    Updated: 2021/11/07 17:41:26 by ajimenez         ###   ########.fr        #
+#    Updated: 2021/11/08 15:49:57 by ajimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,14 +20,14 @@ LIBFT	= ./libft/libft.a
 LIBP	= push_swap.a 
 
 NAME 	= push_swap 
-INCLUDE	= -I./includes/
 SRCS	= ./srcs/push_swap.c ./utils/ft_lst_int.c ./utils/ft_lst_int_2.c \
 		  ./utils/ft_swap.c ./utils/mv_utils.c ./utils/ft_push.c \
-		  ./utils/ft_rotate.c ./srcs/sort-three-five.c ./tmp/ft_print_stacks.c
+		  ./utils/ft_rotate.c ./srcs/sort-three-five.c ./utils/utils_info_stack.c\
+		  ./srcs/sort-utils.c ./tmp/ft_print_stacks.c
 
 OBJS	= $(SRCS:.c=.o)
-COMP	= $(CC) $(LIBP) $(SRCS) -o $(NAME)
-SANCOMP	= $(CC) $(SAN) $(LIBP) $(SRCS) -g3 -o $(NAME)
+COMP	= $(CC) $(CFLAGS) $(LIBP) $(SRCS) -o $(NAME)
+SANCOMP	= $(CC) $(CFLAGS) $(SAN) $(LIBP) $(SRCS) -g3 -o $(NAME)
 
 all: 		$(NAME)
 
