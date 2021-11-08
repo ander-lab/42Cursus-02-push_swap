@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/05 17:31:34 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:27:39 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,23 @@
 
 typedef struct s_stack
 {
-	int				content;
+	int				i;
 	struct s_stack	*next;
 }				t_stack;
 
 /*Revisar que datos necesito para el algoritmo*/
 typedef struct s_struct
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
 }	t_struct;
 /*
 ** TMP
 */
 void	ft_print_stack(t_stack *stack_a, t_stack *stack_b);
 
+/*
+** SORT FT'S
+*/
+void	ft_sort_three(t_stack **stack);
 /*
 ** MOVS UTILS
 */

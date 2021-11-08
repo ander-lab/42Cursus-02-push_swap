@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:39:34 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/05 17:46:23 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:28:48 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,6 @@ void	ft_lstclear_int(t_stack **lst, void (*del)(void *))
 t_stack	*ft_lst_penultimate(t_stack *stack)
 {
 	while (stack->next->next != NULL)
-	{
-/*		if (stack->next->next == NULL)
-		{
-			//stack = stack->next;
-			return(stack);
-			//break;
-		}*/
 		stack = stack->next;
-	}
-	return(stack);
+	return (stack);
 }

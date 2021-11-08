@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:41:18 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/05 17:51:10 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:28:26 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_stack	*ft_lstnew_int(int content)
 	lstnew = malloc(sizeof(t_stack));
 	if (!lstnew)
 		return (0);
-	lstnew->content = content;
+	lstnew->i = content;
 	lstnew->next = NULL;
 	return (lstnew);
 }
