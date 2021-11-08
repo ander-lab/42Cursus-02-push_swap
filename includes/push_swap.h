@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/07 18:27:39 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:00:40 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ typedef struct s_stack
 /*Revisar que datos necesito para el algoritmo*/
 typedef struct s_struct
 {
+	int	max;
+	int min;
 }	t_struct;
 /*
 ** TMP

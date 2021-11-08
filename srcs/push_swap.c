@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/07 18:22:40 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/08 09:52:53 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ int	main(int ac, char **av)
 	t_stack		*stack_b = 0;
 
 	ps = ft_calloc(sizeof(t_struct), 1);
-	//stack_a  = ft_calloc(sizeof(t_struct), 1);
-	//stack_b  = ft_calloc(sizeof(t_struct), 1);
 	if (ac <= 2)
 		return (0);
 	ft_print_stack(stack_a, stack_b);

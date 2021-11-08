@@ -6,11 +6,20 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:09:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/08 08:05:49 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:02:06 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	check_max_min(t_stack **stk, t_struct *ps)
+{
+	while ((*stk)->next)
+	{
+		(*stk)->next;
+	}
+	
+}
 
 void	ft_sort_three(t_stack **stk)
 {
@@ -35,4 +44,13 @@ void	ft_sort_three(t_stack **stk)
 		ft_swap(stk, 'a');
 		ft_rev_rotate(stk, 'a');
 	}
+}
+
+void	ft_sort_five(t_stack **stk)
+{
+	int	aux[3];	
+
+	aux[0] = (*stk)->i;
+	aux[1] = (*stk)->next->i;
+	
 }
