@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/09 16:55:33 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/09 17:44:43 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_print_stack(t_stack *stack_a, t_stack *stack_b);
 */
 void	ft_sort_three(t_stack **stack);
 void	ft_sort_four(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
-//void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
+void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 
 /*
 ** ALGORITHMS UTILS
