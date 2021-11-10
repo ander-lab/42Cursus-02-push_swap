@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/09 17:44:43 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/10 13:40:48 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct s_struct
 {
 	int	max;
 	int min;
+	size_t size_to_max;
+	size_t size_to_min;
 }	t_struct;
 /*
 ** TMP
@@ -43,10 +45,12 @@ void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 /*
 ** ALGORITHMS UTILS
 */
-
+void	check_ordered(t_stack *stk);
 void	get_stack_max(t_stack *stk, t_struct *ps);
 void	get_stack_min(t_stack *stk, t_struct *ps);
 void	get_stack_max_min(t_stack *stk, t_struct *ps);
+void	ft_size_to_max(t_stack *stk, t_struct *ps);
+void	ft_size_to_min(t_stack *stk, t_struct *ps);
 
 /*
 ** MOVS UTILS

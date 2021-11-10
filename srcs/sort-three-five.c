@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:09:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/09 18:04:25 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/10 13:31:56 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,42 +37,15 @@ void	ft_sort_three(t_stack **stk)
 	}
 }
 
-size_t	ft_size_to_max(t_stack *stk, t_struct *ps)
-{
-	size_t size;
-
-	size = 0;
-	while (stk->i != ps->max && stk->next)
-	{
-		stk = stk->next;
-		size++;
-	}
-	return(size);
-}
-
-int	ft_size_to_min(t_stack *stk, t_struct *ps)
-{
-	int size;
-
-	size = 0;
-	while (stk->i != ps->min && stk->next)
-	{
-		stk = stk->next;
-		size++;
-	}
-	return(size);
-}
 
 void	ft_sort_four(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-	int size;
-
-	size = ft_size_to_min(*stk_a, ps);
-	if (size == 1)
+	ft_size_to_min(*stk_a, ps);
+	if (ps->size_to_min == 1)
 		ft_swap(stk_a, 'a');
-	else if (size == 3)
+	else if (ps->size_to_min == 3)
 		ft_rev_rotate(stk_a, 'a');
-	else if (size == 2)
+	else if (ps->size_to_min == 2)
 	{
 		ft_rotate(stk_a, 'a');
 		ft_swap(stk_a, 'a');
@@ -84,19 +57,16 @@ void	ft_sort_four(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 
 void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-	int size;
-
-	size = ft_size_to_max(*stk_a, ps);
-	if (size == 1)
+	if (ps->size_to_max == 1)
 		ft_swap(stk_a, 'a');
-	else if (size == 4)
+	else if (ps->size_to_max == 4)
 		ft_rev_rotate(stk_a, 'a');
-	else if (size == 3)
+	else if  (ps->size_to_max == 3)
 	{
 		ft_rev_rotate(stk_a, 'a');
 		ft_rev_rotate(stk_a, 'a');
 	}
-	else if (size == 2)
+	else if (ps->size_to_max == 2)
 	{
 		ft_rotate(stk_a, 'a');
 		ft_swap(stk_a, 'a');

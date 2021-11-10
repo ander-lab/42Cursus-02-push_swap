@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/09 18:13:57 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/10 13:50:55 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(int ac, char **av)
 	t_stack		*stack_a = 0;
 	t_stack		*stack_b = 0;
 
-	atexit(lk);
+	//atexit(lk);
 	if (ac <= 2)
 		return (0);
 	ps = ft_calloc(sizeof(t_struct), 1);
@@ -59,7 +59,8 @@ int	main(int ac, char **av)
 	get_stack_max_min(stack_a, ps);
 	//ft_print_stack(stack_a, stack_b);
 	ft_sort(&stack_a, &stack_b, ps);
-	//ft_print_stack(stack_a, stack_b);
+	check_ordered(stack_a);
+	ft_print_stack(stack_a, stack_b);
 	free (stack_a);
 	free (ps);
 	return (0);
