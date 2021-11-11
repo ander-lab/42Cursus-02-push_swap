@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/10 13:40:48 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/11 09:54:27 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 /*
 ** ALGORITHMS UTILS
 */
-void	check_ordered(t_stack *stk);
+int		check_ordered(t_stack *stk);
 void	get_stack_max(t_stack *stk, t_struct *ps);
 void	get_stack_min(t_stack *stk, t_struct *ps);
 void	get_stack_max_min(t_stack *stk, t_struct *ps);

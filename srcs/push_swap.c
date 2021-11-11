@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/10 13:50:55 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/11 10:16:39 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ void	ft_add_stack_a(t_stack **stack_a, char **av)
 	{
 		ft_lstadd_back_int(stack_a, ft_lstnew_int(ft_atoi(av[aux])));
 		aux++;
-	 }
+	}
 }
 
-void lk(void)
+void	lk(void)
 {
 	system("leaks -q push_swap");
 }
 
 void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-	size_t stk_size;
+	size_t	stk_size;
 
 	stk_size = ft_lstsize_int(*stk_a);
 	if (stk_size == 3)
@@ -46,9 +46,11 @@ void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 int	main(int ac, char **av)
 {
 	t_struct	*ps;
-	t_stack		*stack_a = 0;
-	t_stack		*stack_b = 0;
+	t_stack		*stack_a;
+	t_stack		*stack_b;
 
+	stack_a = 0;
+	stack_b = 0;
 	//atexit(lk);
 	if (ac <= 2)
 		return (0);
@@ -56,10 +58,11 @@ int	main(int ac, char **av)
 	//ft_print_stack(stack_a, stack_b);
 	ft_add_stack_a(&stack_a, av);
 	stack_b = ft_lstnew_int(0);
+	if (check_ordered(stack_a) == 1)
+		return (0);
 	get_stack_max_min(stack_a, ps);
 	//ft_print_stack(stack_a, stack_b);
 	ft_sort(&stack_a, &stack_b, ps);
-	check_ordered(stack_a);
 	ft_print_stack(stack_a, stack_b);
 	free (stack_a);
 	free (ps);

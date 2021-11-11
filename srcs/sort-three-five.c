@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:09:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/10 13:31:56 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/11 10:19:34 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	ft_sort_three(t_stack **stk)
 	}
 }
 
-
 void	ft_sort_four(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	ft_size_to_min(*stk_a, ps);
@@ -61,7 +60,7 @@ void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 		ft_swap(stk_a, 'a');
 	else if (ps->size_to_max == 4)
 		ft_rev_rotate(stk_a, 'a');
-	else if  (ps->size_to_max == 3)
+	else if (ps->size_to_max == 3)
 	{
 		ft_rev_rotate(stk_a, 'a');
 		ft_rev_rotate(stk_a, 'a');
