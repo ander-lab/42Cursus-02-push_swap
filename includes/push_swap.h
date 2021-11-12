@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/11 09:54:27 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/12 12:45:56 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_struct
 ** TMP
 */
 void	ft_print_stack(t_stack *stack_a, t_stack *stack_b);
+void	printstack(t_stack *stack);
 
 /*
 ** SORT FT'S

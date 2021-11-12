@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:03:44 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/07 18:35:58 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/12 12:52:05 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,6 @@ void	ft_rotate(t_stack **stack, char c)
 	ft_putmov('r', c, 'x');
 }
 
-void	printstack(t_stack *stack)
-{
-	printf("\nstack a------->");
-	while (stack)
-	{
-		printf("%i", stack->i);
-		stack = stack->next;
-	}
-}
 void	ft_rev_rotate(t_stack **stack, char c)
 {
 	t_stack *aux_last;
