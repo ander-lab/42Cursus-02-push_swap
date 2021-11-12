@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/12 12:54:08 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:32:11 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	get_stack_max_min(t_stack *stk, t_struct *ps);
 void	ft_size_to_max(t_stack *stk, t_struct *ps);
 void	ft_size_to_min(t_stack *stk, t_struct *ps);
 t_stack	*ft_mid_of_stack(t_stack *stack);
+int		check_num_side(t_stack *stack, t_struct *ps);
 
 /*
 ** MOVS UTILS

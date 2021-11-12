@@ -6,11 +6,12 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/11 10:16:39 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:34:53 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+#include <stdlib.h>
 #include <string.h>
 
 void	ft_add_stack_a(t_stack **stack_a, char **av)
@@ -58,11 +59,18 @@ int	main(int ac, char **av)
 	//ft_print_stack(stack_a, stack_b);
 	ft_add_stack_a(&stack_a, av);
 	stack_b = ft_lstnew_int(0);
-	if (check_ordered(stack_a) == 1)
-		return (0);
-	get_stack_max_min(stack_a, ps);
+	//if (check_ordered(stack_a) == 1)
+	//	return (0);
+	printstack(ft_mid_of_stack(stack_a));
+	printf("\nstack pre ------->");
+	get_stack_min(stack_a, ps);
+	if (!check_num_side(stack_a, ps))
+		printf("before");
+	if (check_num_side(stack_a, ps))
+		printf("after");
+//	get_stack_max_min(stack_a, ps);
 	//ft_print_stack(stack_a, stack_b);
-	ft_sort(&stack_a, &stack_b, ps);
+//	ft_sort(&stack_a, &stack_b, ps);
 	ft_print_stack(stack_a, stack_b);
 	free (stack_a);
 	free (ps);
