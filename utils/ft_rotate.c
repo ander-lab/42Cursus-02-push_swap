@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:03:44 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/12 12:52:05 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:40:41 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,9 @@ void	ft_rotate(t_stack **stack, char c)
 void	ft_rev_rotate(t_stack **stack, char c)
 {
 	t_stack *aux_last;
-//	t_stack *aux_begin;
 
 	aux_last = ft_lst_penultimate(*stack);
 	ft_lstadd_front_int(stack, ft_lstlast_int(*stack));
 	aux_last->next = NULL;
-	//printstack(*stack);
 	ft_putmov('r', 'r', c);
 }
