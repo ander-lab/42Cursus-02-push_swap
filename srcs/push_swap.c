@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/12 19:02:15 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/13 11:06:24 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ int	main(int ac, char **av)
 	//if (check_ordered(stack_a) == 1)
 	//	return (0);
 	ft_print_stack(stack_a, stack_b);
-	ft_put_on_top(&stack_a, &stack_b, ps);
+	ft_sort_5_to_100(&stack_a, &stack_b, ps);
+//	ft_put_on_top(&stack_a, &stack_b, ps);
 //	ft_sort(&stack_a, &stack_b, ps);
 	ft_print_stack(stack_a, stack_b);
 	free (stack_a);

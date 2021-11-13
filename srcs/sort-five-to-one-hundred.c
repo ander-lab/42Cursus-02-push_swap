@@ -6,19 +6,19 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/12 19:04:23 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/13 11:05:04 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-/*
+
 void	ft_sort_5_to_100(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-	while (stk_a)
-	{
-	}
+	ft_put_on_top(stk_a, stk_b, ps);
+	while ((*stk_b)->next != NULL)
+		ft_push(stk_b, stk_a, 'a');
 }
-*/
+
 void	ft_put_on_top(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	while ((*stk_a)->next != NULL)
