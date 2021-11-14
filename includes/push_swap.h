@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:05:27 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/13 11:12:10 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 01:11:26 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_struct
 {
 	int		max;
 	int		min;
+	int		sec_min;
 	size_t	size_to_max;
 	size_t	size_to_min;
 }	t_struct;
@@ -52,8 +53,10 @@ void	get_stack_max(t_stack *stk, t_struct *ps);
 void	get_stack_min(t_stack *stk, t_struct *ps);
 void	get_stack_max_min(t_stack *stk, t_struct *ps);
 void	ft_size_to_max(t_stack *stk, t_struct *ps);
-void	ft_size_to_min(t_stack *stk, t_struct *ps);
+size_t	ft_size_to_point(t_stack *stk, int content);
 t_stack	*ft_mid_of_stack(t_stack *stack);
+t_stack	*ft_quarter_of_stack(t_stack *stack);
+t_stack	*ft_last_quarter_of_stack(t_stack *stack);
 int		check_num_side(t_stack *stack, t_struct *ps);
 void	ft_put_on_top(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 

@@ -6,11 +6,12 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:55:23 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/11 10:19:05 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 01:16:11 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+#include <stddef.h>
 
 int	check_ordered(t_stack *stk)
 {
@@ -48,15 +49,20 @@ void	ft_size_to_max(t_stack *stk, t_struct *ps)
 	ps->size_to_max = size;
 }
 
-void	ft_size_to_min(t_stack *stk, t_struct *ps)
+size_t	ft_size_to_point(t_stack *stk, int point)
 {
-	int	size;
+	size_t	size;
 
 	size = 0;
-	while (stk->i != ps->min && stk->next)
+	while (stk->i != point && stk->next)
 	{
 		stk = stk->next;
 		size++;
 	}
-	ps->size_to_min = size;
+	return (size);
 }
+/*
+size_t	top_dist(t_stack *stk, t_struct *ps)
+{
+	
+}*/

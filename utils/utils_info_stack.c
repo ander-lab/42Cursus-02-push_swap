@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:25:58 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/13 11:09:28 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:23:17 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	get_stack_min(t_stack *stk, t_struct *ps)
 	{
 		if (ps->min > stk->i)
 			ps->min = stk->i;
+		else if (ps->min < stk->i && ps->sec_min > ps->min && ps->min > stk->i)
+			ps->sec_min = stk->i;
 		stk = stk->next;
 	}
 }
