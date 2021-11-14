@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:25:58 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 18:31:36 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:43:47 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,10 @@ void	get_stack_other_min(t_stack *stk, t_struct *ps)
 {
 	get_stack_min(stk, ps);
 	ps->sec_min = stk->i;
-	int i = 1;
 	while (stk)
 	{
-		printf("%i %i %i\n", i, stk->i, ps->sec_min);
-		//printf("\nel min es :%i \nel otro min es:%i\n", ps->min, ps->sec_min);
-		if ((ps->sec_min > stk->i) && (ps->sec_min > ps->min))
-		{
+		if ((ps->sec_min > stk->i) && (ps->min != stk->i))
 			ps->sec_min = stk->i;
-		//	printf("%i\n", stk->i);
-		}
 		stk = stk->next;
-		i++;
 	}
 }
