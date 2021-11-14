@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/13 11:05:04 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:42:49 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_sort_5_to_100(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	ft_put_on_top(stk_a, stk_b, ps);
-	while ((*stk_b)->next != NULL)
+	while ((*stk_b)->next != NULL && !check_ordered(*stk_a))
 		ft_push(stk_b, stk_a, 'a');
 }
 
@@ -25,7 +25,7 @@ void	ft_put_on_top(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 	{
 		get_stack_min(*stk_a, ps);
 		if (!check_num_side(*stk_a, ps))
-			ft_rotate((stk_a), 'a');
+			ft_rotate(stk_a, 'a');
 		else if (check_num_side(*stk_a, ps))
 			ft_rev_rotate(stk_a, 'a');
 		if ((*stk_a)->i == ps->min)
@@ -35,11 +35,16 @@ void	ft_put_on_top(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 
 int	check_num_side(t_stack *stack, t_struct *ps)
 {
+	size_t	aux;
+
+	aux = 0;
 	while (stack && stack != ft_mid_of_stack(stack))
 	{
 		if (ps->min == stack->i)
-			return (0);
+			return (1);
 		stack = stack->next;
+		aux++;
 	}
-	return (1);
+	return (0);
 }
+

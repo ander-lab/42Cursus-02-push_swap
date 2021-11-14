@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/13 11:06:24 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:24:42 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 		ft_sort_four(stk_a, stk_b, ps);
 	else if (stk_size == 5)
 		ft_sort_five(stk_a, stk_b, ps);
+	else if (stk_size > 5)
+		ft_sort_5_to_100(stk_a, stk_b, ps);
 }
 
 int	main(int ac, char **av)
@@ -61,9 +63,12 @@ int	main(int ac, char **av)
 	stack_b = ft_lstnew_int(0);
 	//if (check_ordered(stack_a) == 1)
 	//	return (0);
-	ft_print_stack(stack_a, stack_b);
-	ft_sort_5_to_100(&stack_a, &stack_b, ps);
+//	ft_print_stack(stack_a, stack_b);
+	//ft_sort_5_to_100(&stack_a, &stack_b, ps);
 //	ft_put_on_top(&stack_a, &stack_b, ps);
+	get_stack_other_min(stack_a, ps);
+	get_stack_max(stack_a, ps);
+	printf("el min es :%i \nel otro min es:%i\n el max es:%i", ps->min, ps->sec_min, ps->max);
 //	ft_sort(&stack_a, &stack_b, ps);
 	ft_print_stack(stack_a, stack_b);
 	free (stack_a);
