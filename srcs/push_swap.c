@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 19:05:59 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 20:38:13 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,10 @@ int	main(int ac, char **av)
 	//ft_sort_5_to_100(&stack_a, &stack_b, ps);
 //	ft_put_on_top(&stack_a, &stack_b, ps);
 	//get_stack_other_min(stack_a, ps);
-	get_stack_max(stack_a, ps);
+	//get_stack_max(stack_a, ps);
+	//priority(stack_a, ps);
 	//printf("el min es :%i \nel otro min es:%i\n el max es:%i", ps->min, ps->sec_min, ps->max);
-	if (dist_top(stack_a, get_stack_other_min(stack_a)) > dist_top(stack_a, get_stack_min(stack_a)))
-		printf("el segundo min esta mas cerca");
-	else
-		printf("el min esta mas cerca");
-	//printf("\ndistop > %lu", aux);
-//	ft_sort(&stack_a, &stack_b, ps);
+	ft_sort(&stack_a, &stack_b, ps);
 	ft_print_stack(stack_a, stack_b);
 	free (stack_a);
 	free (ps);

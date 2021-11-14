@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 19:08:25 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 20:57:04 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,61 @@
 
 void	ft_sort_5_to_100(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-	ft_put_on_top(stk_a, stk_b, ps);
-	while ((*stk_b)->next != NULL && !check_ordered(*stk_a))
-		ft_push(stk_b, stk_a, 'a');
+	ft_put_mins_on_top_and_pb(stk_a, stk_b, ps);
+	ft_put_max_on_top_and_pa(stk_a, stk_b, ps);
 }
 
-void	ft_put_on_top(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
+void	ft_put_max_on_top_and_pa(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
+	while ((*stk_b)->next != NULL && !check_ordered(*stk_a))
+	{
+		printf("cebado");
+		ps->max = get_stack_max(*stk_a);
+		if (check_num_side(*stk_a, ps->max))
+			ft_rotate(stk_a, 'a');
+		else if (!check_num_side(*stk_a, ps->max))
+			ft_rev_rotate(stk_a, 'a');
+		if ((*stk_a)->i == ps->max)
+			ft_push(stk_b, stk_a, 'a');
+		printf("cebado");
+	}
+
+}
+
+void	ft_put_mins_on_top_and_pb(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
+{
+
 	while ((*stk_a)->next != NULL)
 	{
-		ps->min = get_stack_min(*stk_a);
-		if (!check_num_side(*stk_a, ps))
+		priority(*stk_a, ps);
+		if (check_num_side(*stk_a, ps->tomove))
 			ft_rotate(stk_a, 'a');
-		else if (check_num_side(*stk_a, ps))
+		else if (!check_num_side(*stk_a, ps->tomove))
 			ft_rev_rotate(stk_a, 'a');
-		if ((*stk_a)->i == ps->min)
+		if ((*stk_a)->i == ps->tomove)
 			ft_push(stk_a, stk_b, 'b');
 	}
 }
 
-int	check_num_side(t_stack *stack, t_struct *ps)
+void	priority(t_stack *stk, t_struct *ps)
+{
+	if (dist_top(stk, get_stack_other_min(stk)) > dist_top(stk, 
+			get_stack_min(stk)))
+		ps->tomove = get_stack_other_min(stk);
+	else
+		ps->tomove = get_stack_min(stk);
+}
+
+/*Check num return 0 if the number to move is in the first mid of the stack, 
+ * return 1 if is in the second mid*/
+int	check_num_side(t_stack *stack, int tocheck)
 {
 	size_t	aux;
 
 	aux = 0;
 	while (stack && stack != ft_mid_of_stack(stack))
 	{
-		if (ps->min == stack->i)
+		if (tocheck == stack->i)
 			return (1);
 		stack = stack->next;
 		aux++;

@@ -6,21 +6,24 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:25:58 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 19:08:59 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 19:56:10 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	get_stack_max(t_stack *stk, t_struct *ps)
+int	get_stack_max(t_stack *stk)
 {
-	ps->max = stk->i;
+	int	max;
+
+	max = stk->i;
 	while (stk)
 	{
-		if (ps->max < stk->i)
-			ps->max = stk->i;
+		if (max < stk->i)
+			max = stk->i;
 		stk = stk->next;
 	}
+	return (max);
 }
 
 int	get_stack_min(t_stack *stk)

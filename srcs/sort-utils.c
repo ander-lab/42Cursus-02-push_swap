@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:55:23 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 19:04:49 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 20:25:41 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check_ordered(t_stack *stk)
 void	get_stack_max_min(t_stack *stk, t_struct *ps)
 {
 	ps->min = get_stack_min(stk);
-	get_stack_max(stk, ps);
+	ps->max = get_stack_max(stk);
 	ft_size_to_max(stk, ps);
 }
 
@@ -61,8 +61,3 @@ size_t	ft_size_to_point(t_stack *stk, int point)
 	}
 	return (size);
 }
-/*
-size_t	top_dist(t_stack *stk, t_struct *ps)
-{
-	
-}*/
