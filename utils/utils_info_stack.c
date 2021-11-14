@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:25:58 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 18:43:47 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 19:08:59 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,25 +23,44 @@ void	get_stack_max(t_stack *stk, t_struct *ps)
 	}
 }
 
-void	get_stack_min(t_stack *stk, t_struct *ps)
+int	get_stack_min(t_stack *stk)
 {
-	ps->min = stk->i;
+	int	min;
+
+	min = stk->i;
 	while (stk)
 	{
-		if (ps->min > stk->i)
-			ps->min = stk->i;
+		if (min > stk->i)
+			min = stk->i;
 		stk = stk->next;
 	}
+	return (min);
 }
 
-void	get_stack_other_min(t_stack *stk, t_struct *ps)
+int	get_stack_other_min(t_stack *stk)
 {
-	get_stack_min(stk, ps);
-	ps->sec_min = stk->i;
+	int	sec_min;
+
+	sec_min = stk->i;
 	while (stk)
 	{
-		if ((ps->sec_min > stk->i) && (ps->min != stk->i))
-			ps->sec_min = stk->i;
+		if ((sec_min > stk->i) && (get_stack_min(stk) != stk->i))
+			sec_min = stk->i;
 		stk = stk->next;
 	}
+	return (sec_min);
+}
+
+size_t	dist_top(t_stack *stk, int content)
+{
+	size_t	size_of_list;
+	size_t	size_to_point;
+	size_t	distop;
+
+	size_of_list = ft_lstsize_int(stk);
+	size_to_point = ft_size_to_point(stk, content);
+	distop = (size_of_list - size_to_point - size_to_point);
+	if (distop < 0)
+		distop *= -1;
+	return (distop);
 }

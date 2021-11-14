@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 00:42:49 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 19:08:25 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_put_on_top(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	while ((*stk_a)->next != NULL)
 	{
-		get_stack_min(*stk_a, ps);
+		ps->min = get_stack_min(*stk_a);
 		if (!check_num_side(*stk_a, ps))
 			ft_rotate(stk_a, 'a');
 		else if (check_num_side(*stk_a, ps))
@@ -47,4 +47,3 @@ int	check_num_side(t_stack *stack, t_struct *ps)
 	}
 	return (0);
 }
-

@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:09:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 01:15:11 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/14 19:04:06 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,10 @@ void	ft_sort_three(t_stack **stk)
 
 void	ft_sort_four(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-	get_stack_min(*stk_a, ps);
-	ps->size_to_min = ft_size_to_point(*stk_a, ps->min);
+	int	min;
+
+	min = get_stack_min(*stk_a);
+	ps->size_to_min = ft_size_to_point(*stk_a, min);
 	if (ps->size_to_min == 1)
 		ft_swap(stk_a, 'a');
 	else if (ps->size_to_min == 3)
