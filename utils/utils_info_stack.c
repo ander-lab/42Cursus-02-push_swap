@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:25:58 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 19:56:10 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:51:11 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,26 @@ int	get_stack_min(t_stack *stk)
 	return (min);
 }
 
-int	get_stack_other_min(t_stack *stk)
+int	*get_stack_other_min(t_stack *stk)
 {
-	int	sec_min;
+	int	*min;
 
-	sec_min = stk->i;
+	min = malloc(sizeof(int) * 2);
+	if (!min)
+		return (NULL);
+	min[0] = stk->i;
 	while (stk)
 	{
-		if ((sec_min > stk->i) && (get_stack_min(stk) != stk->i))
-			sec_min = stk->i;
+		if (min[0] > stk->i)
+		{
+			min[1] = min[0];
+			min[0] = stk->i;
+		}
+		if (min[1] > stk->i && min[0] < stk->i)
+			min[1] = stk->i;
 		stk = stk->next;
 	}
-	return (sec_min);
+	return (min);
 }
 
 size_t	dist_top(t_stack *stk, int content)

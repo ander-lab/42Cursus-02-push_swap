@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:56:36 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 20:37:28 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:21:38 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_sort_5_to_100(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 int		check_ordered(t_stack *stk);
 int		get_stack_max(t_stack *stk);
 int		get_stack_min(t_stack *stk);
-int		get_stack_other_min(t_stack *stks);
+int		*get_stack_other_min(t_stack *stks);
 void	get_stack_max_min(t_stack *stk, t_struct *ps);
 void	ft_size_to_max(t_stack *stk, t_struct *ps);
 size_t	ft_size_to_point(t_stack *stk, int content);

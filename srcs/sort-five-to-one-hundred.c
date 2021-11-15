@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 20:57:04 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:52:48 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,27 @@ void	ft_put_max_on_top_and_pa(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 
 void	ft_put_mins_on_top_and_pb(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-
 	while ((*stk_a)->next != NULL)
 	{
 		priority(*stk_a, ps);
-		if (check_num_side(*stk_a, ps->tomove))
+		if (!check_num_side(*stk_a, ps->tomove))
 			ft_rotate(stk_a, 'a');
-		else if (!check_num_side(*stk_a, ps->tomove))
+		else if (check_num_side(*stk_a, ps->tomove))
 			ft_rev_rotate(stk_a, 'a');
 		if ((*stk_a)->i == ps->tomove)
 			ft_push(stk_a, stk_b, 'b');
+		//if ((*stk_a)->next != NULL)
+		//	break ;
 	}
 }
 
 void	priority(t_stack *stk, t_struct *ps)
 {
-	if (dist_top(stk, get_stack_other_min(stk)) > dist_top(stk, 
-			get_stack_min(stk)))
-		ps->tomove = get_stack_other_min(stk);
+	if (dist_top(stk, get_stack_other_min(stk)[1]) > dist_top(stk, 
+		get_stack_other_min(stk)[0]))
+		ps->tomove = get_stack_other_min(stk)[1];
 	else
-		ps->tomove = get_stack_min(stk);
+		ps->tomove = get_stack_other_min(stk)[0];
 }
 
 /*Check num return 0 if the number to move is in the first mid of the stack, 
