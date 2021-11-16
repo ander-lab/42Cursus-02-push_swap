@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/15 16:52:48 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/15 17:39:07 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,18 @@ void	ft_put_max_on_top_and_pa(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 
 void	ft_put_mins_on_top_and_pb(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
+	priority(*stk_a, ps);
 	while ((*stk_a)->next != NULL)
 	{
-		priority(*stk_a, ps);
-		if (!check_num_side(*stk_a, ps->tomove))
+		if (check_num_side(*stk_a, ps->tomove))
 			ft_rotate(stk_a, 'a');
-		else if (check_num_side(*stk_a, ps->tomove))
+		else if (!check_num_side(*stk_a, ps->tomove))
 			ft_rev_rotate(stk_a, 'a');
 		if ((*stk_a)->i == ps->tomove)
+		{
 			ft_push(stk_a, stk_b, 'b');
-		//if ((*stk_a)->next != NULL)
-		//	break ;
+			priority(*stk_a, ps);
+		}
 	}
 }
 
@@ -62,6 +63,7 @@ void	priority(t_stack *stk, t_struct *ps)
 
 /*Check num return 0 if the number to move is in the first mid of the stack, 
  * return 1 if is in the second mid*/
+
 int	check_num_side(t_stack *stack, int tocheck)
 {
 	size_t	aux;
