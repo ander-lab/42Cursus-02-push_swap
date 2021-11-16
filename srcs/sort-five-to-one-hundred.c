@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/15 17:39:07 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/16 09:51:29 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,18 @@ void	ft_put_max_on_top_and_pa(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	while ((*stk_b)->next != NULL && !check_ordered(*stk_a))
 	{
-		printf("cebado");
 		ps->max = get_stack_max(*stk_a);
 		if (check_num_side(*stk_a, ps->max))
+		{
 			ft_rotate(stk_a, 'a');
+		}
 		else if (!check_num_side(*stk_a, ps->max))
+		{
 			ft_rev_rotate(stk_a, 'a');
+		}
 		if ((*stk_a)->i == ps->max)
 			ft_push(stk_b, stk_a, 'a');
-		printf("cebado");
+		printf("cebado01\n");
 	}
 
 }
@@ -40,15 +43,25 @@ void	ft_put_mins_on_top_and_pb(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 	priority(*stk_a, ps);
 	while ((*stk_a)->next != NULL)
 	{
+		printf("While\n");
 		if (check_num_side(*stk_a, ps->tomove))
+		{
+			printf("1\n");
 			ft_rotate(stk_a, 'a');
+		}
 		else if (!check_num_side(*stk_a, ps->tomove))
+		{
+			printf("2\n");
 			ft_rev_rotate(stk_a, 'a');
+		}
 		if ((*stk_a)->i == ps->tomove)
 		{
+			printf("3\n");
 			ft_push(stk_a, stk_b, 'b');
 			priority(*stk_a, ps);
 		}
+		//if ((*stk_a)->next != NULL)
+		//	break ;
 	}
 }
 

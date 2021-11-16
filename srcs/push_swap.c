@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 20:38:13 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/16 09:49:02 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	main(int ac, char **av)
 	t_stack		*stack_a;
 	t_stack		*stack_b;
 
+	printf("aqui\n");
 	stack_a = 0;
 	stack_b = 0;
 	//atexit(lk);
