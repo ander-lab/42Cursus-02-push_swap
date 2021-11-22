@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 09:58:46 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/12 13:02:11 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:02:14 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	printstack(t_stack *stack)
 	printf("\nstack ------->");
 	while (stack)
 	{
-		printf("%i", stack->i);
+		printf("%i ", stack->i);
 		stack = stack->next;
 	}
 }

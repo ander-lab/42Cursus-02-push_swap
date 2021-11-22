@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:39:34 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/16 09:56:41 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/22 10:56:38 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 t_stack	*ft_lst_penultimate(t_stack *stack)
 {
-	if (!stack && stack->next == NULL)
-		return (NULL);
 	while (stack->next->next != NULL)
 		stack = stack->next;
 	return (stack);

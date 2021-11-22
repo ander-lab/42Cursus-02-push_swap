@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:57:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/03 10:05:44 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:48:52 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ static void	ft_put_rr(char c)
 
 void	ft_putmov(char a, char b, char c)
 {
+	if (b == 'x')
+		return ;
 	if (b == 'a' && c == 'x')
 	{
 		if (a == 'r')
