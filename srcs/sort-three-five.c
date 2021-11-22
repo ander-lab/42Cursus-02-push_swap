@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:09:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/22 10:41:16 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:09:23 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ void	ft_sort_four(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 
 void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
-	get_stack_max(*stk_a);
+	ps->max = get_stack_max(*stk_a);
+	ft_size_to_max(*stk_a, ps);
 	if (ps->size_to_max == 1)
 		ft_swap(stk_a, 'a');
 	else if (ps->size_to_max == 4)
@@ -78,4 +79,5 @@ void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 	ft_sort_four(stk_a, stk_b, ps);
 	ft_push(stk_b, stk_a, 'a');
 	ft_rotate(stk_a, 'a');
+	printstack(*stk_a);
 }
