@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:09:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/22 16:09:23 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:16:31 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,4 @@ void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 	ft_sort_four(stk_a, stk_b, ps);
 	ft_push(stk_b, stk_a, 'a');
 	ft_rotate(stk_a, 'a');
-	printstack(*stk_a);
 }
