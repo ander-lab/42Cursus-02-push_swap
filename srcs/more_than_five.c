@@ -6,60 +6,11 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:46:38 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/22 16:34:47 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:58:46 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-int	*ft_lst_toa(t_stack *a)
-{
-	int	*array;
-	int	aux;
-
-	array = ft_calloc(ft_lstsize_int(a), sizeof(int));
-	aux = 0;
-	while (a)
-	{
-		array[aux] = a->i;
-		a = a->next;
-		aux++;
-	}
-	return (array);
-}
-
-int *ft_bubble_int(int *s, size_t prev, size_t next)
-{
-	int tmp;
-
-	tmp = s[prev];
-	s[prev] = s[next];
-	s[next] = tmp;
-	return (s);
-}
-
-int	*ft_quick_sort(t_stack *a)
-{
-	int	*sorted;
-	size_t	prev;
-	size_t	next;
-	size_t	len;
-
-	sorted = ft_lst_toa(a);
-	len = ft_lstsize_int(a);
-	prev = 0;
-	while (prev < len)
-	{
-		next = prev + 1;
-		while (next < len)
-		{
-			if (sorted[prev] > sorted[next])
-				sorted = ft_bubble_int(sorted, prev, next);
-			next++;
-		} prev++;
-	}
-	return (sorted);
-}
 
 void	ft_relative_numbers(t_stack	**a)
 {

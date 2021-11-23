@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:39:34 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/22 10:56:38 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:55:40 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,20 @@ t_stack	*ft_quarter_of_stack(t_stack *stack)
 		size--;
 	}
 	return (stack);
+}
+
+int	*ft_lst_toa(t_stack *a)
+{
+	int	*array;
+	int	aux;
+
+	array = ft_calloc(ft_lstsize_int(a), sizeof(int));
+	aux = 0; 
+	while (a)
+	{
+		array[aux] = a->i;
+		a = a->next;
+		aux++;
+	}
+	return (array);
 }
