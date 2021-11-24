@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:46:38 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/23 15:58:46 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:38:59 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void	ft_radix_sort(t_stack **a, t_stack **b)
 				ft_push(a, b, 'b');
 			else
 				ft_rotate(a, 'a');
-//TODO implemetar el punto mas cercano
 			j++;
 		}
 		while (*b)

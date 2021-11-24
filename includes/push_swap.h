@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:56:36 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/23 15:55:54 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/24 13:52:01 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	ft_ss(t_stack **stack_a, t_stack **stack_b);
 void	ft_push(t_stack **src, t_stack **dst, char c);
 void	ft_rotate(t_stack **stack, char c);
 void	ft_rev_rotate(t_stack **stack, char c);
-;
+
 /*
 ** LST INT FUNCTIONS
 */
@@ -90,5 +90,7 @@ t_stack	*ft_lst_penultimate(t_stack *stack);
 void	ft_lstadd_front_int(t_stack **lst, t_stack *new);
 void	ft_lstadd_back_int(t_stack **lst, t_stack *new);
 int		*ft_lst_toa(t_stack *a);
+void	ft_lstdelone_int(t_stack *lst, void (*del)(int));
+void	ft_lstfree(t_stack **lst);
 
 #endif

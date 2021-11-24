@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/22 16:17:43 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:03:40 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,12 @@ int	main(int ac, char **av)
 	ps = ft_calloc(sizeof(t_struct), 1);
 	ft_add_stack_a(&stack_a, av);
 	ft_sort(&stack_a, &stack_b, ps);
-	ft_print_stack(stack_a, stack_b);
+	//ft_print_stack(stack_a, stack_b);
+	if (check_ordered(stack_a))
+		printf("\nyaaaaaas\n");
 	free (stack_a);
+	ft_lstfree(&stack_a);
+	ft_lstfree(&stack_b);
 	free (ps);
 	return (0);
 }
