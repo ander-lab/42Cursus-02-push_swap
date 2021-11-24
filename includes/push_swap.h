@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:56:36 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/24 13:52:01 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:30:21 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_radix_sort(t_stack **a, t_stack **b);
 /*
 ** ALGORITHMS UTILS
 */
+void	ft_add_stack_a(t_stack **stack_a, char **av);
 int		check_ordered(t_stack *stk);
 int		get_stack_max(t_stack *stk);
 int		get_stack_min(t_stack *stk);

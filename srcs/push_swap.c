@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/24 14:03:40 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:28:55 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void	ft_add_stack_a(t_stack **stack_a, char **av)
-{
-	size_t	aux;
-
-	aux = 1;
-	while (av[aux])
-	{
-		ft_lstadd_back_int(stack_a, ft_lstnew_int(ft_atoi(av[aux])));
-		aux++;
-	}
-}
 
 void	lk(void)
 {
