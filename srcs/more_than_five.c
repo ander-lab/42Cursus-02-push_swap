@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:46:38 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/23 16:38:59 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:36:03 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	ft_radix_sort(t_stack **a, t_stack **b)
 	int	i;
 
 	ft_relative_numbers(a);
-	printstack(*a);
 	size = ft_lstsize_int(*a);
 	max_num = size - 1;
 	max_bits = 0;
