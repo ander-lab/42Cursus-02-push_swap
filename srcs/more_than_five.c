@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:46:38 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/24 17:36:03 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:59:15 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	ft_relative_numbers(t_stack	**a)
 		}
 		aux = aux->next;
 	}
+	free (s);
 }
 
 void	ft_radix_sort(t_stack **a, t_stack **b)

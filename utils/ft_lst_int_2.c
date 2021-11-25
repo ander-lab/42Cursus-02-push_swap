@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:39:34 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/24 14:00:04 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:56:49 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ int	*ft_lst_toa(t_stack *a)
 		a = a->next;
 		aux++;
 	}
-	free (array);
 	return (array);
 }
 
