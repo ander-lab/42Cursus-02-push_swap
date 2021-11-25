@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/24 17:49:41 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/25 13:24:00 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 	size_t	stk_size;
 
 	stk_size = ft_lstsize_int(*stk_a);
-	printf("\nstksize == %li\n", stk_size);
 	if (stk_size == 3)
 		ft_sort_three(stk_a);
 	else if (stk_size == 4)
@@ -51,8 +50,6 @@ int	main(int ac, char **av)
 	ft_add_stack_a(&stack_a, av);
 	ft_sort(&stack_a, &stack_b, ps);
 	//ft_print_stack(stack_a, stack_b);
-	if (check_ordered(stack_a))
-		printf("\nyaaaaaas\n");
 	free (stack_a);
 	ft_lstfree(&stack_a);
 	ft_lstfree(&stack_b);
