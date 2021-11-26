@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:07:03 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/26 15:53:34 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/26 18:05:06 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_add_stack_a(t_stack **stack_a, t_stack **stack_b, t_struct *ps, char **a
 	while (av[aux])
 	{ 
 		if (ft_iter_str_bool(av[aux], &ft_isalpha) || 
-			(!ft_iter_str_bool(av[aux], &ft_isalnum)))
+			(!ft_iter_str_bool(av[aux], &ft_isdigit)))
 		{
 			ft_putstr_fd("Error\n", 1); 
 			ft_free_push_swap(stack_a, stack_b, ps);
