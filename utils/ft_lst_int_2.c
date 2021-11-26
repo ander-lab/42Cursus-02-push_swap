@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:39:34 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/25 12:56:49 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/26 10:41:19 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,6 @@ t_stack	*ft_mid_of_stack(t_stack *stack)
 	size_t	size;
 
 	size = ft_lstsize_int(stack) / 2;
-	while (size && stack)
-	{
-		stack = stack->next;
-		size--;
-	}
-	return (stack);
-}
-
-t_stack	*ft_quarter_of_stack(t_stack *stack)
-{
-	size_t	size;
-
-	size = ft_lstsize_int(stack) / 4;
 	while (size && stack)
 	{
 		stack = stack->next;
@@ -74,4 +61,15 @@ void	ft_lstfree(t_stack **lst)
 		free((*lst));
 	}
 	*lst = NULL;
+}
+
+void	ft_lstiter_int(t_stack *lst, void (*f)(void *))
+{
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		//(*f)(lst->i);
+		lst = lst->next;
+	}
 }

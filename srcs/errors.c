@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 09:56:04 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/26 10:08:15 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:54:01 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,20 @@
 
 void	check_errors(t_stack *stack)
 {
-	if (/*TODO Funcion que compruebe que todos son int*/)
+	if (ft_iter_str_bool(av[aux], &ft_isalpha))
+
+	{
+		ft_putstr_fd("Error\n", 1); 
+		exit (0);
+	}
 
 	if (/*TODO Funcion que compruebe que va ordenada*/)
 
+}
+void	ft_free_push_swap(t_stack **stack_a, t_stack **stack_b, t_struct *ps)
+{
+	free (*stack_a);
+	ft_lstfree(stack_a);
+	ft_lstfree(stack_b);
+	free (ps);
 }
