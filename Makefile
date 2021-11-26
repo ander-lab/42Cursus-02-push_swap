@@ -6,7 +6,7 @@
 #    By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 17:35:10 by ajimenez          #+#    #+#              #
-#    Updated: 2021/11/24 17:32:01 by ajimenez         ###   ########.fr        #
+#    Updated: 2021/11/26 17:32:35 by ajimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS	= ./srcs/push_swap.c ./srcs/sort-three-five.c ./srcs/sort-utils.c    \
 		  ./utils/ft_lst_int_2.c  ./utils/ft_swap.c ./utils/mv_utils.c       \
 		  ./utils/ft_push.c ./utils/ft_rotate.c  ./utils/utils_info_stack.c  \
 		  ./srcs/more_than_five.c ./utils/ft_quick_sort.c ./srcs/parser.c 	 \
-		  ./tmp/ft_print_stacks.c 
+		  ./tmp/ft_print_stacks.c ./srcs/errors.c
 
 OBJS	= $(SRCS:.c=.o)
 COMP	= $(CC) $(CFLAGS) $(LIBP) $(SRCS) -o $(NAME)
