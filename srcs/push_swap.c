@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/26 17:34:48 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:01:13 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	main(int ac, char **av)
 		return (0);
 	ps = ft_calloc(sizeof(t_struct), 1);
 	ft_add_stack_a(&stack_a, &stack_b, ps, av);
-	printstack(stack_a);
 	ft_sort(&stack_a, &stack_b, ps);
 	//ft_print_stack(stack_a, stack_b);
 	ft_free_push_swap(&stack_a, &stack_b, ps);
