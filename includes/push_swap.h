@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:56:36 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/26 17:30:04 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:29:50 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ size_t	dist_top(t_stack *stk, int content);
 void	priority(t_stack *stk, t_struct *ps);
 int		*ft_quick_sort(t_stack *a);
 void	ft_free_push_swap(t_stack **stack_a, t_stack **stack_b, t_struct *ps);
+size_t	ft_check_signs(char *str, t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 
 /*
 ** MOVS UTILS
