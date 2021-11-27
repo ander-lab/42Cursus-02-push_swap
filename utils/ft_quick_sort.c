@@ -6,15 +6,15 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:43:06 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/23 15:45:27 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:30:22 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static int *ft_bubble_int(int *s, size_t prev, size_t next)
+static int	*ft_bubble_int(int *s, size_t prev, size_t next)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = s[prev];
 	s[prev] = s[next];
@@ -24,10 +24,10 @@ static int *ft_bubble_int(int *s, size_t prev, size_t next)
 
 int	*ft_quick_sort(t_stack *a)
 {
-	int	*sorted;
 	size_t	prev;
 	size_t	next;
 	size_t	len;
+	int		*sorted;
 
 	sorted = ft_lst_toa(a);
 	len = ft_lstsize_int(a);
@@ -40,7 +40,8 @@ int	*ft_quick_sort(t_stack *a)
 			if (sorted[prev] > sorted[next])
 				sorted = ft_bubble_int(sorted, prev, next);
 			next++;
-		} prev++;
+		}
+		prev++;
 	}
 	return (sorted);
 }

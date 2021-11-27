@@ -6,12 +6,12 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:52:28 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/16 16:06:51 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:31:23 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
+/*
 void	ft_sort_5_to_100(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	ft_put_mins_on_top_and_pb(stk_a, stk_b, ps);
@@ -70,8 +70,8 @@ void	priority(t_stack *stk, t_struct *ps)
 		ps->tomove = get_stack_other_min(stk)[0];
 }
 
-/*Check num return 0 if the number to move is in the first mid of the stack, 
- * return 1 if is in the second mid*/
+Check num return 0 if the number to move is in the first mid of the stack, 
+ * return 1 if is in the second mid
 
 int	check_num_side(t_stack *stack, int tocheck)
 {
@@ -86,4 +86,4 @@ int	check_num_side(t_stack *stack, int tocheck)
 		aux++;
 	}
 	return (0);
-}
+}*/

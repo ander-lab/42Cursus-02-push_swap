@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/27 16:01:13 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 19:29:21 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,25 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 void	lk(void)
 {
 	system("leaks -q push_swap");
 }
 
-void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
+static void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	size_t	stk_size;
 
+	printstack(*stk_a);
+	if (check_ordered(*stk_a))
+	{
+		return ;
+	}
+	if (!ft_check_repeat_nums(*stk_a))
+	{
+		ft_putstr_fd("Error\n", 1);
+		return ;
+	}
 	stk_size = ft_lstsize_int(*stk_a);
 	if (stk_size == 3)
 		ft_sort_three(stk_a);

@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:55:23 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/14 20:25:41 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:58:31 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,11 @@ int	check_ordered(t_stack *stk)
 {
 	int	trigger;
 
-	trigger = 0;
+	trigger = 1;
 	while (stk->next != NULL )
 	{
-		if (stk->i < stk->next->i)
-			trigger = 1;
-		else
-			break ;
+		if (stk->i > stk->next->i)
+			return (0);
 		stk = stk->next;
 	}
 	return (trigger);

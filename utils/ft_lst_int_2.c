@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:39:34 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/26 10:41:19 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:28:55 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	*ft_lst_toa(t_stack *a)
 	int	aux;
 
 	array = ft_calloc(ft_lstsize_int(a), sizeof(int));
-	aux = 0; 
+	aux = 0;
 	while (a)
 	{
 		array[aux] = a->i;
@@ -61,15 +61,4 @@ void	ft_lstfree(t_stack **lst)
 		free((*lst));
 	}
 	*lst = NULL;
-}
-
-void	ft_lstiter_int(t_stack *lst, void (*f)(void *))
-{
-	if (!lst || !f)
-		return ;
-	while (lst)
-	{
-		//(*f)(lst->i);
-		lst = lst->next;
-	}
 }

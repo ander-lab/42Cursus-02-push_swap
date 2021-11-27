@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:46:38 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/25 12:59:15 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:22:44 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	ft_relative_numbers(t_stack	**a)
 {
 	int		i;
 	int		len;
+	int		*s;
 	t_stack	*aux;
-	int *s;
 
 	s = ft_quick_sort(*a);
 	aux = *a;
-	len = ft_lstsize_int(*a); 
-	while (aux) 
+	len = ft_lstsize_int(*a);
+	while (aux)
 	{
 		i = 0;
 		while (i < len)
@@ -41,7 +41,6 @@ void	ft_relative_numbers(t_stack	**a)
 
 void	ft_radix_sort(t_stack **a, t_stack **b)
 {
-	int	max_num;
 	int	size;
 	int	max_bits;
 	int	j;
@@ -49,24 +48,21 @@ void	ft_radix_sort(t_stack **a, t_stack **b)
 
 	ft_relative_numbers(a);
 	size = ft_lstsize_int(*a);
-	max_num = size - 1;
 	max_bits = 0;
-	while ((max_num >> max_bits) != 0)
+	while (((size - 1) >> max_bits) != 0)
 		++max_bits;
-	i = 0;
-	while (i < max_bits)
+	i = -1;
+	while (++i < max_bits)
 	{
-		j = 0;
-		while (j < size)
+		j = -1;
+		while (++j < size)
 		{
 			if (!(((*a)->i >> i) & 1))
 				ft_push(a, b, 'b');
 			else
 				ft_rotate(a, 'a');
-			j++;
 		}
 		while (*b)
 			ft_push(b, a, 'a');
-		i++;
 	}
 }
