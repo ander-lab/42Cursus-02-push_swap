@@ -6,11 +6,17 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:09:05 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/22 16:16:31 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:06:04 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	ft_sort_two(t_stack	**stk)
+{
+	if ((*stk)->i > (*stk)->next->i)
+		ft_swap(stk, 'a');
+}
 
 void	ft_sort_three(t_stack **stk)
 {

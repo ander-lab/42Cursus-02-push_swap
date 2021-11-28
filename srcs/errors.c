@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 09:56:04 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/27 19:31:01 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:01:19 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_free_push_swap(t_stack **stack_a, t_stack **stack_b, t_struct *ps)
 	free (ps);
 }
 
-//TODO Funcion general errores
 int	ft_check_repeat_nums(t_stack *stk)
 {
 	int		n;

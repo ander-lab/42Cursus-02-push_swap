@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:56:36 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/27 18:49:55 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:06:30 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ void	printstack(t_stack *stack);
 /*
 ** SORT FT'S
 */
+void	ft_sort_two(t_stack	**stk);
 void	ft_sort_three(t_stack **stack);
 void	ft_sort_four(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 void	ft_sort_five(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
-//void	ft_sort_5_to_100(t_stack **stk_a, t_stack **stk_b, t_struct *ps);
 void	ft_radix_sort(t_stack **a, t_stack **b);
 
 /*
@@ -62,13 +62,7 @@ void	get_stack_max_min(t_stack *stk, t_struct *ps);
 void	ft_size_to_max(t_stack *stk, t_struct *ps);
 size_t	ft_size_to_point(t_stack *stk, int content);
 t_stack	*ft_mid_of_stack(t_stack *stack);
-int		check_num_side(t_stack *stack, int tocheck);
-void	ft_put_mins_on_top_and_pb(t_stack **stk_a,
-			t_stack **stk_b, t_struct *ps);
-void	ft_put_max_on_top_and_pa(t_stack **stk_a,
-			t_stack **stk_b, t_struct *ps);
 size_t	dist_top(t_stack *stk, int content);
-void	priority(t_stack *stk, t_struct *ps);
 int		*ft_quick_sort(t_stack *a);
 void	ft_free_push_swap(t_stack **stack_a, t_stack **stack_b, t_struct *ps);
 size_t	ft_check_signs(char *str, t_stack **stk_a, t_struct *ps);

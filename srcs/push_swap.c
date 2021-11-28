@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/27 19:29:21 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:07:01 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ static void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 
 	printstack(*stk_a);
 	if (check_ordered(*stk_a))
-	{
 		return ;
-	}
 	if (!ft_check_repeat_nums(*stk_a))
 	{
 		ft_putstr_fd("Error\n", 1);
 		return ;
 	}
 	stk_size = ft_lstsize_int(*stk_a);
-	if (stk_size == 3)
+	if (stk_size == 2)
+		ft_sort_two(stk_a);
+	else if (stk_size == 3)
 		ft_sort_three(stk_a);
 	else if (stk_size == 4)
 		ft_sort_four(stk_a, stk_b, ps);
@@ -59,6 +59,6 @@ int	main(int ac, char **av)
 	ft_add_stack_a(&stack_a, &stack_b, ps, av);
 	ft_sort(&stack_a, &stack_b, ps);
 	//ft_print_stack(stack_a, stack_b);
-	ft_free_push_swap(&stack_a, &stack_b, ps);
+	//ft_free_push_swap(&stack_a, &stack_b, ps);
 	return (0);
 }
