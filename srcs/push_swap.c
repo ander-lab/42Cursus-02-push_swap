@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/28 19:07:01 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:16:37 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static void	ft_sort(t_stack **stk_a, t_stack **stk_b, t_struct *ps)
 {
 	size_t	stk_size;
 
-	printstack(*stk_a);
 	if (check_ordered(*stk_a))
 		return ;
 	if (!ft_check_repeat_nums(*stk_a))
@@ -60,5 +59,6 @@ int	main(int ac, char **av)
 	ft_sort(&stack_a, &stack_b, ps);
 	//ft_print_stack(stack_a, stack_b);
 	//ft_free_push_swap(&stack_a, &stack_b, ps);
+	printstack(stack_a);
 	return (0);
 }

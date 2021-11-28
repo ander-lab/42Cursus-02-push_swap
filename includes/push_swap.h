@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:56:36 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/28 19:06:30 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:24:31 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,8 @@ typedef struct s_struct
 {
 	int		max;
 	int		min;
-	int		sec_min;
 	size_t	size_to_max;
 	size_t	size_to_min;
-	size_t	distop;
-	int		tomove;
 }	t_struct;
 /*
 ** TMP
@@ -51,20 +48,18 @@ void	ft_radix_sort(t_stack **a, t_stack **b);
 /*
 ** ALGORITHMS UTILS
 */
-//void	ft_add_stack_a(t_stack **stack_a, char **av);
 void	ft_add_stack_a(t_stack **stack_a, t_stack **stack_b,
 			t_struct *ps, char **av);
 int		check_ordered(t_stack *stk);
 int		get_stack_max(t_stack *stk);
 int		get_stack_min(t_stack *stk);
-int		*get_stack_other_min(t_stack *stks);
-void	get_stack_max_min(t_stack *stk, t_struct *ps);
 void	ft_size_to_max(t_stack *stk, t_struct *ps);
 size_t	ft_size_to_point(t_stack *stk, int content);
-t_stack	*ft_mid_of_stack(t_stack *stack);
-size_t	dist_top(t_stack *stk, int content);
 int		*ft_quick_sort(t_stack *a);
 void	ft_free_push_swap(t_stack **stack_a, t_stack **stack_b, t_struct *ps);
+/*
+** PARSER
+*/
 size_t	ft_check_signs(char *str, t_stack **stk_a, t_struct *ps);
 int		ft_check_repeat_nums(t_stack *stk);
 
