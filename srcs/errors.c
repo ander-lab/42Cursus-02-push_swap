@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 09:56:04 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/28 19:01:19 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/11/29 09:46:30 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ size_t	ft_check_signs(char *str, t_stack **stk_a, t_struct *ps)
 	while (str[i] != 0)
 	{
 		if ((str[i] == '+') || (str[i] == '-')
-			|| ((!ft_strchr("0123456789+- ", str[i]))))
+			|| ((!ft_strchr("0123456789+- ", str[i])))) 
 		{
 			if ((!ft_strchr("0123456789+- ", str[i])))
 				count += 2;
