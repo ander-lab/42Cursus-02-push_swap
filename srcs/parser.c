@@ -6,13 +6,21 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:07:03 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/12/01 13:35:30 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:50:20 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static int	ft_atoi_check(t_stack **stack_a, const char *str)
+static void	exit_atoi(t_stack **stack_a)
+{
+	free (*stack_a);
+	ft_lstfree(stack_a);
+	ft_putstr_fd("Error\n", 1);
+	exit (0);
+}
+
+static int	atoch(t_stack **stack_a, const char *str)
 {
 	int				i;
 	int				s;
@@ -33,11 +41,7 @@ static int	ft_atoi_check(t_stack **stack_a, const char *str)
 	{
 		r = (r * 10) + (str[i] - '0');
 		if ((r > 2147483647 && s == 1) || (r > 2147483648 && s == -1))
-		{
-			free (*stack_a);
-			ft_lstfree(stack_a);
-			exit (0);
-		}
+			exit_atoi(stack_a);
 		i++;
 	}
 	return (r * s);
@@ -54,7 +58,7 @@ static void	ft_add_splitted_args(t_stack **stack_a, char **av, size_t aux,
 	while (num[i])
 	{
 		ft_check_signs(av[aux], stack_a, ps);
-		ft_lstadd_back_int(stack_a, ft_lstnew_int(ft_atoi_check(stack_a, num[i])));
+		ft_lstadd_back_int(stack_a, ft_lstnew_int(atoch(stack_a, num[i])));
 		i++;
 	}
 }
@@ -79,7 +83,7 @@ void	ft_add_stack_a(t_stack **stack_a, t_stack **stack_b,
 		else
 		{
 			ft_check_signs(av[aux], stack_a, ps);
-			ft_lstadd_back_int(stack_a, ft_lstnew_int(ft_atoi_check(stack_a, av[aux])));
+			ft_lstadd_back_int(stack_a, ft_lstnew_int(atoch(stack_a, av[aux])));
 		}
 		aux++;
 	}
