@@ -6,13 +6,14 @@
 /*   By: ajimenez <ajimenez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 19:17:40 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/11/29 09:48:12 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/12/01 12:59:36 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 
 void	lk(void)
 {
@@ -51,7 +52,7 @@ int	main(int ac, char **av)
 
 	stack_a = 0;
 	stack_b = 0;
-	//atexit(lk);
+	atexit(lk);
 	if (ac < 2)
 		return (0);
 	ps = ft_calloc(sizeof(t_struct), 1);
@@ -59,6 +60,6 @@ int	main(int ac, char **av)
 	ft_sort(&stack_a, &stack_b, ps);
 	//ft_print_stack(stack_a, stack_b);
 	ft_free_push_swap(&stack_a, &stack_b, ps);
-	printstack(stack_a);
+//	printstack(stack_a);
 	return (0);
 }
