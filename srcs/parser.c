@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:07:03 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/12/01 14:50:20 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:22:12 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ static void	ft_add_splitted_args(t_stack **stack_a, char **av, size_t aux,
 		ft_lstadd_back_int(stack_a, ft_lstnew_int(atoch(stack_a, num[i])));
 		i++;
 	}
+	ft_free_matrix(num);
 }
 
 void	ft_add_stack_a(t_stack **stack_a, t_stack **stack_b,
