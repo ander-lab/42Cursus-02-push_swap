@@ -6,7 +6,7 @@
 /*   By: ajimenez <ajimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:07:03 by ajimenez          #+#    #+#             */
-/*   Updated: 2021/12/01 13:07:45 by ajimenez         ###   ########.fr       */
+/*   Updated: 2021/12/01 13:35:30 by ajimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static int	ft_atoi_check(t_stack **stack_a, const char *str)
 		r = (r * 10) + (str[i] - '0');
 		if ((r > 2147483647 && s == 1) || (r > 2147483648 && s == -1))
 		{
-			ft_lstfree(stack_a);
 			free (*stack_a);
+			ft_lstfree(stack_a);
 			exit (0);
 		}
 		i++;
